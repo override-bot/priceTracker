@@ -7,7 +7,7 @@
 
 </head>
 
-<body onload="showData()">
+<body onload="parse2()">
 
     <p class="greeting">
         <span id="hours">Good Morning!</span><br/><span style="color:rgb(207, 205, 205); font-size:40px !important;">It's a good time for business</span></p>
@@ -44,9 +44,9 @@
     </div>
     <div class="suggest">
         GENERAL CRYPTO INFO
-        <p>Total number of coins: <span class="tCoins">---</span></p>
-        <p>Markets: <span class="markets">---</span></p>
-        <p>Total Volume: <span class="tVol">---</span></p>
+        <p>Total number of coins: <span class="tCoins" id="tcoins">---</span></p>
+        <p>Total Mkt Cap: <span class="markets" id="tmarkets">---</span></p>
+        <p>Total Volume: <span class="tVol" id="tvol">---</span></p>
     </div>
     <script src="script.js"></script>
 </body>
