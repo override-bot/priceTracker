@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Prices</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body onload="showData()">
+
+    <p class="greeting">
+        <span id="hours">Good Morning!</span><br/><span style="color:rgb(207, 205, 205); font-size:40px !important;">It's a good time for business</span></p>
+    <form> <input type="search" placeholder="Enter Coin Symbol" id="symbol" oninput="parseJson()"></form>
+
+    <br/>
+    <div class="cryptoHeadline">
+        <p class="name" id="name"></p>
+        <p class="price" id="price">$</p>
+        <div class="diff" id="diff"></div>
+    </div><br/>
+    <div class="otherInfo">
+        <table>
+            <tr>
+                <td>
+                    SYMBOL: <span id="sym"></span>
+                </td>
+                <td>VOL.: <span class="vol" id="vol">----------------</span></td>
+            </tr><br/>
+            <tr>
+                <td>
+                    RANK: <span class="cap" id="rank">-----------------</span>
+                </td>
+                <td> MKT CAP:<span id="cap">---------------</span></td>
+            </tr><br/>
+            <tr>
+                <td>
+                    HIGH: <span class="cap" id="high">-----------------</span>
+                </td>
+                <td> LOW:<span class="vol" id="low">----------------</span></td>
+            </tr><br/>
+        </table>
+        <div class="greyLine"></div>
+    </div>
+    <div class="suggest">
+        GENERAL CRYPTO INFO
+        <p>Total number of coins: <span class="tCoins">---</span></p>
+        <p>Markets: <span class="markets">---</span></p>
+        <p>Total Volume: <span class="tVol">---</span></p>
+    </div>
+    <script src="script.js"></script>
+</body>

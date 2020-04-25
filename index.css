@@ -1,0 +1,85 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(20, 74, 110);
+}
+
+input {
+    height: 60px;
+    width: 99%;
+    margin: 0 auto;
+    border: 1px solid lightgray;
+    border-radius: 25px;
+    font-size: xx-large;
+    font-weight: bold;
+    background-color: lightgrey;
+    color: black;
+}
+
+.greeting {
+    font-size: 60px;
+    color: white;
+}
+
+.cryptoHeadline {
+    background-color: rgb(15, 57, 85);
+    height: 400px;
+    width: 90%;
+    margin: 5px auto;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+
+.name {
+    color: white;
+    font-weight: 300;
+    font-size: 65px;
+    margin-top: 0;
+}
+
+.price {
+    color: white;
+    font-size: 70px;
+    text-align: center;
+}
+
+.diff {
+    width: 30%;
+    height: 60px;
+    background-color: rgb(124, 223, 124);
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    font-size: xx-large;
+}
+
+.greyLine {
+    height: 3px;
+    width: 100%;
+    background-color: grey;
+}
+
+td {
+    font-size: 38px;
+    color: white;
+    font-weight: 400;
+    width: 50%
+}
+
+tr {
+    margin-top: 10px;
+}
+
+table {
+    border-spacing: 5px 35px;
+}
+
+.otherInfo {
+    color: white !important;
+}
+
+.suggest {
+    font-size: 35px;
+    font-weight: 500;
+    color: white;
+}
