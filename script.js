@@ -29,7 +29,7 @@ function showData(response) {
     document.getElementById('price').innerHTML = Math.round(response.price).toFixed(2);
     document.getElementById('diff').innerHTML = response.delta_1h + "%";
     document.getElementById('sym').innerHTML = response.show_symbol;
-    document.getElementById('vol').innerHTML = Math.round(response.total_volume_24h).toFixed(2);
+    document.getElementById('vol').innerHTML = Math.round(response.total_volume_24h).toFixed(3);
     document.getElementById('cap').innerHTML = Math.round(response.market_cap).toFixed(2);
     document.getElementById('rank').innerHTML = response.rank;
     document.getElementById('low').innerHTML = Math.round(response.low_24h).toFixed(2);
