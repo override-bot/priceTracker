@@ -63,15 +63,16 @@ td {
     font-size: 38px;
     color: white;
     font-weight: 400;
-    width: 50%
+    width: 35%
 }
 
 tr {
     margin-top: 10px;
+    font-size: 38px;
 }
 
 table {
-    border-spacing: 5px 35px;
+    border-spacing: 5px 30px;
 }
 
 .otherInfo {
@@ -82,4 +83,44 @@ table {
     font-size: 35px;
     font-weight: 500;
     color: white;
+}
+
+.tab {
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+
+/* Style the buttons inside the tab */
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 40px;
+    width: 50%;
+    height: 65px;
+    font-weight: 500;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+    background-color: rgb(20, 74, 110);
+}
+
+
+/* Style the tab content */
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
 }
