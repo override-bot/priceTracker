@@ -5,6 +5,13 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="green">
 <meta name="apple-mobile-web-app-title" content="Z-Tracker">
 <link rel="apple-touch-icon" href="android-chrome-192x192.png" sizes="192x192">
+<link rel="apple-touch-startup-image" href="android-chrome-512x512.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="android-chrome-512x512.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="android-chrome-512x512.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="android-chrome-512x512.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="android-chrome-512x512.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="android-chrome-512x512.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="android-chrome-512x512.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
 
 <head>
     <title>Prices</title>
@@ -16,38 +23,35 @@
 
     <p class="greeting">
         <span id="hours">Good Morning!</span><br/><span style="color:rgb(207, 205, 205); font-size:40px !important;">It's a good time for business</span></p>
-    <div class="tab"> <button class="tablinks" onclick="openTab(event, 'ranking')">Rankings</button>
+    <div class="tab"> <button class="tablinks" onclick="openTab(event, 'ranking')">Ranking</button>
         <button class="tablinks" onclick="openTab(event, 'pricer')">Price</button></div><br/>
+
     <div class="tabcontent" id="pricer">
         <form> <input type="search" placeholder="Enter Coin Symbol" id="symbol" oninput="parseJson()"></form>
 
         <br/>
+
         <div class="cryptoHeadline">
             <p class="name" id="name"></p>
             <p class="price" id="price">$</p>
             <div class="diff" id="diff"></div>
-        </div><br/>
+        </div>
         <div class="otherInfo">
-            <table>
-                <tr>
-                    <td>
-                        SYMBOL: <span id="sym"></span>
-                    </td>
-                    <td>VOL.: <span class="vol" id="vol">----------------</span></td>
-                </tr><br/>
-                <tr>
-                    <td>
-                        RANK: <span class="cap" id="rank">-----------------</span>
-                    </td>
-                    <td> MKT CAP:<span id="cap">---------------</span></td>
-                </tr><br/>
-                <tr>
-                    <td>
-                        HIGH: <span class="cap" id="high">-----------------</span>
-                    </td>
-                    <td> LOW:<span class="vol" id="low">----------------</span></td>
-                </tr><br/>
-            </table>
+
+
+            <p>SYMBOL: <span id="sym"></span></p>
+
+            <p>VOL.: <span class="vol" id="vol"></span></p>
+
+
+            <p> RANK: <span class="cap" id="rank"></span>
+            </p>
+            <p>MKT CAP:<span id="cap"></span></p>
+
+            <p> HIGH: <span class="cap" id="high"></span>
+            </p>
+            <p> LOW:<span class="vol" id="low"></span></p>
+
 
         </div>
         <div class="suggest">

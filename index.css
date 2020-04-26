@@ -4,7 +4,16 @@ html {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(20, 74, 110);
+    background-color: white;
+    color: black !important;
+}
+
+.temp {
+    height: 40vh;
+    width: 80%;
+    margin: 0 auto;
+    background-image: url(android-chrome-192x192.png);
+    background-size: 100% 100%;
 }
 
 input {
@@ -21,27 +30,29 @@ input {
 
 .greeting {
     font-size: 60px;
-    color: white;
+    color: #209CEE;
+    font-weight: bold;
 }
 
 .cryptoHeadline {
-    background-color: rgb(15, 57, 85);
+    background-color: white;
     height: 400px;
-    width: 90%;
+    width: 95%;
     margin: 5px auto;
     border: 1px solid lightgrey;
     border-radius: 10px;
+    box-shadow: .4vw .4vw .6vw #d0d0d0, -.4vw -.4vw .6vw #f6f6f6;
 }
 
 .name {
-    color: white;
+    color: rgb(65, 64, 64);
     font-weight: 300;
     font-size: 65px;
     margin-top: 0;
 }
 
 .price {
-    color: white;
+    color: rgb(65, 64, 64);
     font-size: 70px;
     text-align: center;
 }
@@ -65,9 +76,9 @@ input {
 
 td {
     font-size: 38px;
-    color: white;
+    color: rgb(65, 64, 64);
     font-weight: 400;
-    width: 35%
+    border: 1px solid black;
 }
 
 tr {
@@ -77,16 +88,27 @@ tr {
 
 table {
     border-spacing: 5px 30px;
+    border-collapse: collapse;
 }
 
 .otherInfo {
-    color: white !important;
+    color: rgb(65, 64, 64);
+    box-shadow: .4vw .4vw .6vw #d0d0d0, -.4vw -.4vw .6vw #f6f6f6;
+    width: 95%;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: x-large;
+    border-radius: 5px;
 }
 
 .suggest {
     font-size: 35px;
     font-weight: 500;
-    color: white;
+    color: rgb(65, 64, 64);
+    box-shadow: .4vw .4vw .6vw #d0d0d0, -.4vw -.4vw .6vw #f6f6f6;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 5px;
 }
 
 .tab {
@@ -118,7 +140,7 @@ table {
 /* Create an active/current tablink class */
 
 .tab button.active {
-    background-color: rgb(20, 74, 110);
+    background-color: white;
 }
 
 

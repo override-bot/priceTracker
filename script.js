@@ -121,4 +121,5 @@ function openTab(evt, title) {
     }
     document.getElementById(title).style.display = "block";
     evt.currentTarget.className += " active";
+    document.getElementsByClassName('temp').style.display = "none";
 }
