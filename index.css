@@ -288,3 +288,13 @@ a {
     font-size: 50px;
     font-weight: bold;
 }
+
+.slides {
+    color: black !important;
+    height: 900px;
+    width: 98%;
+    margin: 0 auto;
+    box-shadow: .4vw .4vw .6vw #d0d0d0, -.4vw -.4vw .6vw #f6f6f6;
+    color: black;
+    margin-top: 15px;
+}
