@@ -173,6 +173,8 @@ table {
     color: rgb(55, 53, 187);
     border-bottom: 4px solid rgb(55, 53, 187);
     border-radius: 7px;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
 }
 
 .coin-list {
