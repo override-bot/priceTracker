@@ -1,6 +1,9 @@
-//boss
 //parse3();
-parse4();
+//parse4();
+
+parse5();
+
+
 var hours = new Date().getHours();
 
 if (hours < 12) {
@@ -127,7 +130,7 @@ function openTab(evt, title) {
     evt.currentTarget.className += " active";
 }
 
-function parse4() {
+/**function parse4() {
     let link = "https://newsapi.org/v2/everything?q=bitcoin&apiKey=139624f8df934a929b35b3bc9c9eea14";
     let request = new XMLHttpRequest();
     request.open('GET', link);
@@ -139,9 +142,9 @@ function parse4() {
         showNews(response);
 
     }
-}
+}**/
 
-function showNews(response) {
+/**function showNews(response) {
     var container = document.getElementById('container');
     for (i = 0; i < (response.articles).length - 10; i++) {
         var news = document.createElement('div');
@@ -167,26 +170,49 @@ function showNews(response) {
         source.className = 'headline';
         source.innerHTML = "Source:" + response.articles[i].source.name;
         news.appendChild(source);
-        /**  info.appendChild(coins);
-        var rank = document.createElement('p');
-        rank.className = 'rankList';
-        rank.innerHTML = "Rank:" + response.data[i].rank;
-        info.appendChild(rank);
-        var price = document.createElement('p');
-        price.className = 'price-list';
-        price.innerHTML = "$" + response.data[i].price_usd;
-        info.appendChild(price);
-        var priceD = document.createElement('p');
-        priceD.className = 'priceD';
-        priceD.innerHTML = response.data[i].percent_change_1h + "%" + "(1H)";
-        info.appendChild(priceD);
-        var priceDA = document.createElement('p');
-        priceDA.className = 'priceDA';
-        priceDA.innerHTML = response.data[i].percent_change_24h + "%" + "(24H)";
-        info.appendChild(priceDA);
-**/
-
         container.appendChild(news);
     }
 }
-showNews();
+showNews();**/
+
+function parse5() {
+    let link = "https://min-api.cryptocompare.com/data/v2/news/?lang=EN&api_key=8e624370f51cb9f8aef093c25b2f69683ece1c955c04de4a82a05c3da00299dc";
+    let request = new XMLHttpRequest();
+    request.open('GET', link);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+        const response = request.response;
+        console.log(response)
+        showSlide(response);
+
+    }
+
+}
+
+function showSlide(response) {
+    var container = document.getElementById('slideshow-container');
+    for (i = 0; i < (response.Data).length - 30; i++) {
+        var slides = document.createElement('div');
+        slides.className = 'mySlides';
+        var images = document.createElement('img');
+
+        images.src = response.Data[i].imageurl;
+        slides.appendChild(images);
+        var text = document.createElement('a');
+        text.className = 'text';
+        text.innerHTML = response.Data[i].title;
+        text.href = response.Data[i].url;
+        slides.appendChild(text);
+        container.appendChild(slides);
+    }
+
+
+
+}
+
+
+
+//function showSlides() {
+// Change image every 2 seconds
+//}
