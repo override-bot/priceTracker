@@ -1,5 +1,6 @@
 //boss
-parse3();
+//parse3();
+parse4();
 var hours = new Date().getHours();
 
 if (hours < 12) {
@@ -43,7 +44,7 @@ function showData(response) {
 showData()
 
 function parse2() {
-    var symbol = document.getElementById('symbol').value;
+
     let link = "https://coinlib.io/api/v1/global?key=7044b78a91d369f3&pref=USD";
     let request = new XMLHttpRequest();
     request.open('GET', link);
@@ -81,30 +82,33 @@ function parse3() {
 }
 
 function showTable(response) {
-    var tr, td;
-    tbody =
-        document.querySelector('.tbody');
-    tr = tbody.insertRow();
-    td = tr.insertCell();
+    var container = document.getElementById('ranking');
+    for (i = 0; i < (response.data).length; i++) {
+        var info = document.createElement('div');
+        info.className = 'info';
+        var coins = document.createElement('p');
+        coins.className = 'coin-list';
+        coins.innerHTML = response.data[i].name + "(" + response.data[i].symbol + ")";
+        info.appendChild(coins);
+        var rank = document.createElement('p');
+        rank.className = 'rankList';
+        rank.innerHTML = "Rank:" + response.data[i].rank;
+        info.appendChild(rank);
+        var price = document.createElement('p');
+        price.className = 'price-list';
+        price.innerHTML = "$" + response.data[i].price_usd;
+        info.appendChild(price);
+        var priceD = document.createElement('p');
+        priceD.className = 'priceD';
+        priceD.innerHTML = response.data[i].percent_change_1h + "%" + "(1H)";
+        info.appendChild(priceD);
+        var priceDA = document.createElement('p');
+        priceDA.className = 'priceDA';
+        priceDA.innerHTML = response.data[i].percent_change_24h + "%" + "(24H)";
+        info.appendChild(priceDA);
 
-    td.innerHTML = "COINS";
-    td = tr.insertCell();
-    td.innerHTML = "RANK";
-    td = tr.insertCell();
-    td.innerHTML = "PRICE";
-    td = tr.insertCell();
-    td.innerHTML = "% CHANGE";
-    for (var i = 0; i < (response.data).length; i++) {
 
-        tr = tbody.insertRow(tbody.rows.length);
-        td = tr.insertCell(tr.cells.length);
-        td.innerHTML = response.data[i].name;
-        td = tr.insertCell(tr.cells.length);
-        td.innerHTML = response.data[i].rank;
-        td = tr.insertCell(tr.cells.length);
-        td.innerHTML = response.data[i].price_usd;
-        td = tr.insertCell(tr.cells.length);
-        td.innerHTML = response.data[i].percent_change_1h;
+        container.appendChild(info);
     }
 }
 showTable();
@@ -122,3 +126,67 @@ function openTab(evt, title) {
     document.getElementById(title).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+function parse4() {
+    let link = "https://newsapi.org/v2/everything?q=bitcoin&apiKey=139624f8df934a929b35b3bc9c9eea14";
+    let request = new XMLHttpRequest();
+    request.open('GET', link);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+        const response = request.response;
+        console.log(response)
+        showNews(response);
+
+    }
+}
+
+function showNews(response) {
+    var container = document.getElementById('container');
+    for (i = 0; i < (response.articles).length - 10; i++) {
+        var news = document.createElement('div');
+        news.className = 'news';
+        var headline = document.createElement('p');
+        headline.className = 'headline';
+        headline.innerHTML = response.articles[i].title;
+        news.appendChild(headline);
+        var author = document.createElement('p');
+        author.className = 'author';
+        author.innerHTML = "by" + " " + response.articles[i].author;
+        news.appendChild(author);
+        var description = document.createElement('p');
+        description.className = 'author';
+        description.innerHTML = response.articles[i].description;
+        news.appendChild(description);
+        var a = document.createElement('a');
+        a.className = 'a';
+        a.innerHTML = "Read More>>";
+        a.href = response.articles[i].url;
+        news.appendChild(a);
+        var source = document.createElement('p');
+        source.className = 'headline';
+        source.innerHTML = "Source:" + response.articles[i].source.name;
+        news.appendChild(source);
+        /**  info.appendChild(coins);
+        var rank = document.createElement('p');
+        rank.className = 'rankList';
+        rank.innerHTML = "Rank:" + response.data[i].rank;
+        info.appendChild(rank);
+        var price = document.createElement('p');
+        price.className = 'price-list';
+        price.innerHTML = "$" + response.data[i].price_usd;
+        info.appendChild(price);
+        var priceD = document.createElement('p');
+        priceD.className = 'priceD';
+        priceD.innerHTML = response.data[i].percent_change_1h + "%" + "(1H)";
+        info.appendChild(priceD);
+        var priceDA = document.createElement('p');
+        priceDA.className = 'priceDA';
+        priceDA.innerHTML = response.data[i].percent_change_24h + "%" + "(24H)";
+        info.appendChild(priceDA);
+**/
+
+        container.appendChild(news);
+    }
+}
+showNews();

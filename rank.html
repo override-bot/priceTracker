@@ -15,50 +15,34 @@
 <link rel="apple-touch-startup-image" href="android-chrome-512x512.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
 
 <head>
-    <title>Home</title>
+    <script src="https://kit.fontawesome.com/f2301fb50d.js" crossorigin="anonymous"></script>
+    <title>Ranks</title>
     <link rel="stylesheet" href="index.css">
-
     <style>
         h1 {
-            color: black;
+            color: rgb(55, 53, 187);
             font-size: 73px;
-        }
-        
-        footer {
-            position: fixed;
-            bottom: 0;
             text-align: center;
         }
     </style>
 </head>
-<script src="https://kit.fontawesome.com/f2301fb50d.js" crossorigin="anonymous"></script>
+<div class="navbar">
+    <a href="index.html"><i class="fas fa-home"></i></a>
+    <a href="rank.html" class="active"><i class="fas fa-list-ol"></i></a>
+    <a href="price.html"><i class="fas fa-dollar-sign"></i></a>
+</div>
+<div class="gta">
+    <p class="greeting">
+        <span id="hours">Good Morning!</span><br/><span style=" font-size:40px !important;">It's a good time for business</span></p>
+</div>
 
-<body onload="parse2()">
-    <div class="navbar">
-        <a href="index.html" class="active"><i class="fas fa-home"></i></a>
-        <a href="rank.html"><i class="fas fa-list-ol"></i></a>
-        <a href="price.html"><i class="fas fa-dollar-sign"></i></a>
-    </div>
-    <div class="gta">
-        <p class="greeting">
-            <span id="hours">Good Morning!</span><br/><span style=" font-size:40px !important;">It's a good time for business</span></p>
-    </div>
-    <br/>
-    <h1>News</h1>
-    <div id="container">
+<body onload="parse3()">
+
+    <h1>CRYPTOCURRENCY RANKING</h1>
+    <div id="ranking">
 
     </div>
-    <div class="suggest">
-        <h1> GENERAL CRYPTO INFO</h1>
-        <p>Total number of coins: <span class="tCoins" id="tcoins">---</span></p>
-        <p>Total Mkt Cap: <span class="markets" id="tmarkets">---</span></p>
-        <p>Total Volume: <span class="tVol" id="tvol">---</span></p>
-    </div>
-    </div>
-
     <script src="script.js"></script>
-
 </body>
-<footer>Powered by NewsAPI.org</footer>
 
 </html>

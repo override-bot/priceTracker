@@ -15,50 +15,59 @@
 <link rel="apple-touch-startup-image" href="android-chrome-512x512.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
 
 <head>
-    <title>Home</title>
+    <title>Prices</title>
     <link rel="stylesheet" href="index.css">
-
-    <style>
-        h1 {
-            color: black;
-            font-size: 73px;
-        }
-        
-        footer {
-            position: fixed;
-            bottom: 0;
-            text-align: center;
-        }
-    </style>
+    <script src="https://kit.fontawesome.com/f2301fb50d.js" crossorigin="anonymous"></script>
 </head>
-<script src="https://kit.fontawesome.com/f2301fb50d.js" crossorigin="anonymous"></script>
 
-<body onload="parse2()">
+<body>
     <div class="navbar">
-        <a href="index.html" class="active"><i class="fas fa-home"></i></a>
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="navbar">
+        <a href="index.html"><i class="fas fa-home"></i></a>
         <a href="rank.html"><i class="fas fa-list-ol"></i></a>
-        <a href="price.html"><i class="fas fa-dollar-sign"></i></a>
+        <a href="price.html" class="active"><i class="fas fa-dollar-sign"></i></a>
     </div>
     <div class="gta">
         <p class="greeting">
             <span id="hours">Good Morning!</span><br/><span style=" font-size:40px !important;">It's a good time for business</span></p>
     </div>
     <br/>
-    <h1>News</h1>
-    <div id="container">
+    <div id="pricer">
+        <form> <input type="search" placeholder="Enter Coin Symbol" id="symbol" oninput="parseJson()"></form>
 
-    </div>
-    <div class="suggest">
-        <h1> GENERAL CRYPTO INFO</h1>
-        <p>Total number of coins: <span class="tCoins" id="tcoins">---</span></p>
-        <p>Total Mkt Cap: <span class="markets" id="tmarkets">---</span></p>
-        <p>Total Volume: <span class="tVol" id="tvol">---</span></p>
-    </div>
-    </div>
+        <br/>
 
-    <script src="script.js"></script>
+        <div class="cryptoHeadline">
+            <p class="name" id="name"></p>
+            <p class="price" id="price">$</p>
+            <div class="diff" id="diff"></div>
+        </div>
+        <div class="otherInfo">
+
+
+            <p>SYMBOL: <span id="sym"></span></p>
+
+            <p>VOL.: <span class="vol" id="vol"></span></p>
+
+
+            <p> RANK: <span class="cap" id="rank"></span>
+            </p>
+            <p>MKT CAP:<span id="cap"></span></p>
+
+            <p> HIGH: <span class="cap" id="high"></span>
+            </p>
+            <p> LOW:<span class="vol" id="low"></span></p>
+
+
+        </div>
+        <script src="script.js"></script>
 
 </body>
-<footer>Powered by NewsAPI.org</footer>
+
+</html>
 
 </html>
