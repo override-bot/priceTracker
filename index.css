@@ -289,8 +289,8 @@ a {
 .mySlides {
     color: black !important;
     width: 98%;
-    margin: 0 auto;
+    margin: 15 auto;
     box-shadow: .4vw .4vw .6vw #d0d0d0, -.4vw -.4vw .6vw #f6f6f6;
     color: black;
-    margin-top: 15px;
+    margin-top: 45px;
 }
