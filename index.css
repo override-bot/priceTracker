@@ -273,7 +273,7 @@ table {
 
 img {
     width: 100%;
-    height: 350px;
+    height: 370px;
 }
 
 a {
@@ -282,16 +282,12 @@ a {
 }
 
 .text {
-    position: relative;
-    bottom: 8px;
-    left: 16px;
     font-size: 50px;
     font-weight: bold;
 }
 
-.slides {
+.mySlides {
     color: black !important;
-    height: 900px;
     width: 98%;
     margin: 0 auto;
     box-shadow: .4vw .4vw .6vw #d0d0d0, -.4vw -.4vw .6vw #f6f6f6;
