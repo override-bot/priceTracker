@@ -299,12 +299,12 @@ a {
     color: rgb(55, 53, 187);
     font-size: 50px;
     font-weight: bold;
-    margin-top: 3px;
+    margin: 10px;
 }
 
 .imageo {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
 }
 
