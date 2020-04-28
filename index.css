@@ -41,14 +41,14 @@ input {
 }
 
 .name {
-    color: #5AF;
+    color: rgb(85, 125, 255);
     font-weight: 500;
     font-size: 55px;
     margin-top: 0;
 }
 
 .price {
-    color: #5AF;
+    color: rgb(85, 125, 255);
     font-weight: 500;
     font-size: 70px;
     text-align: center;
@@ -171,20 +171,21 @@ table {
 
 .gta {
     color: #5AF;
-    border-bottom: 4px solid #5AF;
+    border-bottom: 4px solid rgb(85, 125, 255);
     border-radius: 7px;
     border-left: 1px solid grey;
     border-right: 1px solid grey;
+    margin-top: 40px;
 }
 
 .coin-list {
-    color: #5AF;
+    color: rgb(85, 125, 255);
     font-weight: bold;
     font-size: 45px;
 }
 
 .price-list {
-    color: #5AF;
+    color: rgb(85, 125, 255);
     text-align: center;
     font-weight: bolder;
     font-size: 55px;
@@ -214,7 +215,7 @@ table {
 
 .headline {
     font-size: 50px;
-    color: #5AF;
+    color: rgb(85, 125, 255);
     font-weight: bold;
 }
 
@@ -232,12 +233,12 @@ table {
 .a {
     font-size: 40px;
     font-weight: bold;
-    color: #5AF;
+    color: rgb(85, 125, 255);
     text-decoration: none;
 }
 
 .navbar {
-    background-color: #5AF;
+    background-color: rgb(85, 125, 255);
     display: flex;
     overflow: hidden;
     position: fixed;
@@ -267,7 +268,7 @@ table {
 
 .navbar a.active {
     background-color: white;
-    color: #5AF;
+    color: rgb(85, 125, 255);
     border: none;
 }
 
@@ -293,11 +294,11 @@ a {
     box-shadow: .4vw .4vw .6vw #d0d0d0, -.4vw -.4vw .6vw #f6f6f6;
     color: black;
     margin-top: 45px;
-    border-bottom: 5px solid #5AF;
+    border-bottom: 5px solid rgb(85, 125, 255);
 }
 
 .blog {
-    color: #5AF;
+    color: rgb(85, 125, 255);
     font-size: 50px;
     font-weight: bold;
     margin: 10px;
@@ -310,5 +311,38 @@ a {
 }
 
 .spanish {
+    display: flex;
+}
+
+.header {
+    height: 100px;
+    background-color: rgb(85, 125, 255);
+    width: 100%;
+}
+
+.header2 {
+    height: 80px;
+    background-color: white;
+    width: 100%;
+}
+
+.header-img {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.p {
+    font-size: 24px;
+    color: WHite;
+}
+
+.marq {
+    color: black;
+    font-size: 36px;
+    margin: 5px;
+}
+
+marquee {
     display: flex;
 }

@@ -81,7 +81,7 @@ function parse3() {
         const response = request.response;
         console.log(response)
         showTable(response);
-        marquee(response);
+
 
     }
 }
@@ -228,8 +228,15 @@ function showSlide(response) {
 
 }
 
+function marquee(response) {
+    var container = document.getElementById('mar');
+    var p1 = document.createElement('span');
+    p1.className = 'marq';
+    p1.innerHTML = `Number of coins: ${(response.coins).toLocaleString() }.`;
+    container.appendChild(p1);
+    var p2 = document.createElement('span');
+    p2.className = 'marq';
+    p2.innerHTML = `Total Market Cap: ${Math.round(response.total_market_cap).toLocaleString()}.`;
+    container.appendChild(p2);
 
-
-//function showSlides() {
-// Change image every 2 seconds
-//}
+}
