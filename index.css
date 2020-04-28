@@ -41,14 +41,14 @@ input {
 }
 
 .name {
-    color: rgb(55, 53, 187);
+    color: #5AF;
     font-weight: 500;
     font-size: 55px;
     margin-top: 0;
 }
 
 .price {
-    color: rgb(55, 53, 187);
+    color: #5AF;
     font-weight: 500;
     font-size: 70px;
     text-align: center;
@@ -170,21 +170,21 @@ table {
 }
 
 .gta {
-    color: rgb(55, 53, 187);
-    border-bottom: 4px solid rgb(55, 53, 187);
+    color: #5AF;
+    border-bottom: 4px solid #5AF;
     border-radius: 7px;
     border-left: 1px solid grey;
     border-right: 1px solid grey;
 }
 
 .coin-list {
-    color: rgb(55, 53, 187);
+    color: #5AF;
     font-weight: bold;
     font-size: 45px;
 }
 
 .price-list {
-    color: rgb(55, 53, 187);
+    color: #5AF;
     text-align: center;
     font-weight: bolder;
     font-size: 55px;
@@ -214,7 +214,7 @@ table {
 
 .headline {
     font-size: 50px;
-    color: rgb(55, 53, 187);
+    color: #5AF;
     font-weight: bold;
 }
 
@@ -232,12 +232,12 @@ table {
 .a {
     font-size: 40px;
     font-weight: bold;
-    color: rgb(55, 53, 187);
+    color: #5AF;
     text-decoration: none;
 }
 
 .navbar {
-    background-color: rgb(55, 53, 187);
+    background-color: #5AF;
     display: flex;
     overflow: hidden;
     position: fixed;
@@ -267,7 +267,7 @@ table {
 
 .navbar a.active {
     background-color: white;
-    color: rgb(55, 53, 187);
+    color: #5AF;
     border: none;
 }
 
@@ -293,10 +293,11 @@ a {
     box-shadow: .4vw .4vw .6vw #d0d0d0, -.4vw -.4vw .6vw #f6f6f6;
     color: black;
     margin-top: 45px;
+    border-bottom: 5px solid #5AF;
 }
 
 .blog {
-    color: rgb(55, 53, 187);
+    color: #5AF;
     font-size: 50px;
     font-weight: bold;
     margin: 10px;
