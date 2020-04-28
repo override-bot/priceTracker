@@ -57,6 +57,7 @@ function parse2() {
         const response = request.response;
         console.log(response)
         showGlobal(response);
+        marquee(response)
 
     }
 }
@@ -80,6 +81,7 @@ function parse3() {
         const response = request.response;
         console.log(response)
         showTable(response);
+        marquee(response);
 
     }
 }
@@ -186,6 +188,7 @@ function parse5() {
         console.log(response)
         showSlide(response);
 
+
     }
 
 }
@@ -195,6 +198,20 @@ function showSlide(response) {
     for (i = 0; i < (response.Data).length - 30; i++) {
         var slides = document.createElement('div');
         slides.className = 'mySlides';
+        var span = document.createElement('span');
+        span.className = 'spanish';
+        var image = document.createElement('img');
+        image.className = 'imageo';
+        image.src = response.Data[i].source_info.img;
+        span.appendChild(image);
+        var header = document.createElement('a');
+        header.className = 'blog';
+
+        header.innerHTML = response.Data[i].source;
+
+        span.appendChild(header);
+
+        slides.appendChild(span);
         var images = document.createElement('img');
 
         images.src = response.Data[i].imageurl;
