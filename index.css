@@ -307,3 +307,7 @@ a {
     height: 120px;
     border-radius: 50%;
 }
+
+.spanish {
+    display: flex;
+}
